@@ -1,0 +1,24 @@
+spring:
+  cloud:
+    consul:
+      discovery:
+        #Кастомизированое название клиента в консуле (название пода)
+        instance-id: "${spring.cloud.client.hostname}"
+        #URL жизнеспособности сервиса (тут идет на нод порт)
+        healthCheckUrl: http://65.108.155.54:30007/status
+        healthCheckInterval: 5s
+
+server:
+  port: 8080
+
+
+#spring:
+#  application:
+#    name: consul-agent
+#  cloud:
+#    consul:
+#      enabled: true
+#      port: 8500
+#      host: host.docker.internal
+#      discovery:
+#        instanceId: ${spring.application.name}:${random.value}

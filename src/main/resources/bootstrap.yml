@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: consul-agent
+  cloud:
+    consul:
+      #To k8s
+      # Адрес сервера консула
+      host: 95.216.144.149
+      port: 80
+      #To Docker
+      #host: host.docker.internal
+      #port: 8500
+      #host: localhost
+      #port: 8500
